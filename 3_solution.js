@@ -5,4 +5,12 @@ let user = {
     part: "FE",
   };
 
-//답 작성
+const json = JSON.stringify(user);
+const parsed = JSON.parse(json);
+
+console.log(json);
+alert(parsed);
+
+
+
+
