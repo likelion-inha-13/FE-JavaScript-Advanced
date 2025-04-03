@@ -7,4 +7,17 @@ let arr = [
   ];
   
   
-  
+  const filterd1 = arr.filter(arr => arr.part != "staff");
+ 
+
+  // const filterd2 = filterd.filter(filterd => filterd.part =="fe");
+
+  const filterd2 = filterd1.filter(filterd1 => filterd1.name !="보연");
+
+  filterd2.sort((a,b) => b.age-a.age);
+
+let names = filterd2.map(filterd2 => filterd2.name);
+
+console.log("최종 이름 배열 : ["+ names + "]" );
+
+names.forEach((names) => console.log(names));
