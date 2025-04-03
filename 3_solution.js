@@ -5,4 +5,8 @@ let user = {
     part: "FE",
   };
 
-//답 작성
+  const json = JSON.stringify(user); //객체를 JSON 문자열로 변환
+  console.log(json)
+
+  const parsed = JSON.parse(json); //JSON 형태를 다시 객체로 변경
+  console.log(parsed);
