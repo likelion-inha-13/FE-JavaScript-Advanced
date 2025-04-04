@@ -6,19 +6,33 @@ let arr = [
     { part: "be", name: "기현", age: 25 }
   ];
   
-  // 1. staff 제거
-  arr = arr.filter(member => member.part !== "staff");
+
+
+  //arr.splice(2,2); 
   
-  // 2. "fe"는 남기되 "보연"은 제거
-  arr = arr.filter(member => !(member.part === "fe" && member.name === "보연"));
+
+
+  // console.log(arr);
+
+  const filtered = arr.filter(arr1=> arr1.part !== "staff" );
+
+  const filtered2 = filtered.filter(arr1=>arr1.name !=="보연");
+
+
+
   
-  // 3. 나이 내림차순 정렬
-  arr.sort((a, b) => b.age - a.age);
+  filtered2.sort((a,b)=>b.age-a.age);
+
+  const newArray = filtered2.map(function(person){
+    return person.name;
+  });
+
+  console.log("최종 이름 배열: ")
+  console.log(newArray);
   
-  // 4. 이름만 뽑아 배열 만들기
-  const names = arr.map(member => member.name);
-  console.log("최종 이름 배열:", names);
-  
-  // 5. 이름 한 줄씩 출력
-  names.forEach(name => console.log(name));
-  
+  newArray.forEach(function(name){
+    console.log(name);
+  });
+
+
+
