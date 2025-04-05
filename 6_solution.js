@@ -6,19 +6,19 @@ let arr = [
     { part: "be", name: "기현", age: 25 }
   ];
   
-  // 1. staff 제거
-  arr = arr.filter(member => member.part !== "staff");
-  
-  // 2. "fe"는 남기되 "보연"은 제거
-  arr = arr.filter(member => !(member.part === "fe" && member.name === "보연"));
-  
-  // 3. 나이 내림차순 정렬
-  arr.sort((a, b) => b.age - a.age);
-  
-  // 4. 이름만 뽑아 배열 만들기
-  const names = arr.map(member => member.name);
-  console.log("최종 이름 배열:", names);
-  
-  // 5. 이름 한 줄씩 출력
-  names.forEach(name => console.log(name));
-  
+
+const filtered = arr.filter(user => user.part !== "staff" && user.name !== "보연");
+// staff, "보연" 동시에 제외 
+
+filtered.sort((a,b) => b.age - a.age);
+// 내림차순 정렬 
+// a가 크면 음수, b가 크면 양수가 나오므로 큰 수인 b가 앞으로 가게 됨 
+
+const newarr = filtered.map(user => user.name);
+// newarr 라는 이름으로 이름만 뽑아낸 새 배열 저장장
+
+console.log("최종 이름 배열 :", newarr);
+// 출력
+
+newarr.forEach(name => console.log(name));
+// forEach를 사용하여 한 줄씩 이름을 출력함
