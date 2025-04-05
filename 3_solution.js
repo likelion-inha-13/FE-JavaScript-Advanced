@@ -6,3 +6,6 @@ let user = {
   };
 
 //답 작성
+const json = JSON.stringify(user);
+
+console.log(json);
