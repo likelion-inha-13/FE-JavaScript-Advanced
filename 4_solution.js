@@ -10,3 +10,6 @@ class Person {
       console.log(`이름: ${this.name}, 취미: ${this.hobby}`);
     }
 }
+
+const person = new Person("yesong", "piano");
+person.getPerson();
