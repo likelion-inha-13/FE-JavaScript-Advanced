@@ -5,4 +5,10 @@ let user = {
     part: "FE",
   };
 
+  const json = JSON.stringify(user);
+
+  const parsed = JSON.parse(json);
+  console.log(parsed);
+
+
 //답 작성
