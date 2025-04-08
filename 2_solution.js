@@ -6,7 +6,8 @@ let user = {
 };
 
 // 여기에 코드를 작성해주세요
+const { name:Name, years:age, isAdmin = false } = user;
 
-alert(Name); // "민서"
-alert(age); // 21
-alert(isAdmin); // false
+console.log(Name); // "민서"
+console.log(age); // 21
+console.log(isAdmin); // false
